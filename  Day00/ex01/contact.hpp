@@ -11,7 +11,17 @@ class Contact{
 	public:
 		Contact();
 		~Contact();
-		
+
+		void GetFirstname();
+		void SetFirstname();
+		void GetLastname();
+		void SetLastname();
+		void GetNickname();
+		void SetNickname();
+		void GetPhonenumber();
+		void SetPhonenumber();
+		void GetDarkestsecret();
+		void SetDarkestsecret();
 }
 
 #endif

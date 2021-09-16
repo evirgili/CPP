@@ -4,7 +4,15 @@
 class Phonebook
 {
 	private:
-		Contact arr[8];
+		Contact contacts[8];
+		int count;
+
+	public:
+		Phonebook();
+		~Phonebook();
+
+		void AddContact();
+		void SearchContact();
 }
 
 #endif
