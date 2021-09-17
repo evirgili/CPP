@@ -1,13 +1,15 @@
-#include <iostream>
 #include "Phonebook.hpp"
 
-int main(){
+int main()
+{
 	Phonebook	phonebook;
 	std::string cmd;
 
 	while (1)
 	{
-		std::cout << "Enter your comand: ";
+		std::cout << MAGENTA;
+		std::cout << "Enter your command (ADD	SEARCH	EXIT): ";
+		std::cout << RESET;
 		std::cin >> cmd;
 		if (std::cin.eof())
 			break;
@@ -19,8 +21,11 @@ int main(){
 		}
 		else if (cmd == "EXIT")
 			break;
-		else
+		else{
+			std::cout <<  RED;
 			std::cout << "Wrong input" << std::endl;
+			std::cout << RESET;
+		}
 	}
 	return (0);
 }
