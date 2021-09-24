@@ -21,9 +21,9 @@ int main()
 		}
 		else if (cmd == "EXIT")
 			break;
-		else{
+		else if (!cmd.empty()){
 			std::cout <<  RED;
-			std::cout << "Wrong input" << std::endl;
+			std::cout << "Wrong input " << std::endl;
 			std::cout << RESET;
 		}
 	}

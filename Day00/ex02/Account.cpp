@@ -1,4 +1,7 @@
 #include "Account.hpp"
+#include <iostream>
+#include <iomanip>
+#include <time.h>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
@@ -105,4 +108,14 @@ void Account::_displayTimestamp(void)
 	<< std::setw(2) << timeinfo->tm_hour
 	<< std::setw(2) << timeinfo->tm_min
 	<< std::setw(2) << timeinfo->tm_sec << "] ";
+}
+
+Account::~Account(void)
+{
+	Account::_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";";
+	--_nbAccounts;
+	std::cout << "amount:" << _amount << ";";
+	_totalAmount -= _amount;
+	std::cout << "closed" << std::endl;
 }

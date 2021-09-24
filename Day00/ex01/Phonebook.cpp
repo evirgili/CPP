@@ -37,6 +37,7 @@ void	Phonebook::SearchContact()
 	std::string str;
 	int	req_index;
 
+
 	std::cout << std::setw(10) << "index" << '|'
 	<< std::setw(10) << "first name" << '|'
 	<< std::setw(10) << "last name" << '|'
@@ -47,7 +48,15 @@ void	Phonebook::SearchContact()
 	std::cout << "Select the required index" << std::endl;
 	std::cout << RESET;
 	std::cin >> req_index;
-	std::cout << "COUNT = " << count << std::endl;
+	if (std::cin.fail())
+	{
+		std::cin.clear();
+		std::cin.ignore(256,'\n');
+		std::cout <<  RED;
+		std::cout << "Wrong input" << std::endl;
+		std::cout << RESET;
+		return ;
+	}
 	if (req_index < 1 || (req_index - 1 >= count && full == false) //?
 		|| (req_index - 1 > 8 && full == true))
 	{

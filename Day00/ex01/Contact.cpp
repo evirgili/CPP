@@ -25,7 +25,7 @@ void	Contact::SetLastname()
 void	Contact::SetNickname()
 {
 	std::cout << "Add Nickname" << std::endl;
-	astd::cin >> nickname;
+	std::cin >> nickname;
 }
 
 void	Contact::SetPhonenumber()
