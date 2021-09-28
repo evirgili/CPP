@@ -10,7 +10,7 @@ void	HumanB::setWeapon(Weapon &weapon){
 
 void	HumanB::attack(void){
 	std::cout << "Slaaay! " << _name;
-	std::cout << "started attack with";
+	std::cout << " started attack with ";
 	if (_weapon)
 		std::cout << (*_weapon).getType() << std::endl;
 	else

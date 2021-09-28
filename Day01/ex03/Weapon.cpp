@@ -2,6 +2,7 @@
 
 Weapon::Weapon(const std::string type){
 
+	std::cout << "waepon name constructor.\n";
 	if (type.empty())
 		_type = "null_ptr";
 	else

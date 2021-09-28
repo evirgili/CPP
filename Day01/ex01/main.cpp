@@ -11,15 +11,15 @@ int	GetNumberOfZombiez()
 		if (!std::cin.good())
 		{
 			std::cin.clear();
-    		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cout << "Y u do dis..?\n";
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << "Wtf? Sorry not sorry\n";
 			continue;
 		}
 		if (n > 0)
 			break;
 		else
 		{
-			std::cout << "Nayeee. Postitive\n";
+			std::cout << "Sorry need postitive\n";
 			continue ;
 		}
 	}

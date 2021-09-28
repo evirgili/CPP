@@ -15,6 +15,10 @@ int main()
 	std::cout << BLUE << "WHERE'S CHANEL №5??????????????" << RESET << std::endl;
 	randomChump("CHANEL №5");
 
+	if (1)	{
+		Zombie	local_dude = Zombie("CHANEL №6");
+		local_dude.announce();
+	}
 	delete zombie_2;
 	delete zombie_4;
 	return (0);
