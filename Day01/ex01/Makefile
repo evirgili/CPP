@@ -8,7 +8,7 @@ SRC			=	main.cpp\
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
 #================================= flags ==================================#
-CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98
+CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 #================================= headers =================================#
 INC			=	Zombie.hpp\
 
