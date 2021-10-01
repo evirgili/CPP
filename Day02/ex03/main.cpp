@@ -1,50 +1,33 @@
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-void	make_some_tests(Fixed &a, Fixed &b)
+// https://abakbot.ru/online-2/280-pointreug
+
+int main(void)
 {
-	std::cout << "================================\n";
-	std::cout << "a = " << a << std::endl << "b = " << b << std::endl;
-	std::cout << "a > b\t" << (a > b) << std::endl;
-	std::cout << "a < b\t" << (a < b) << std::endl;
-	std::cout << "a >= b\t" << (a >= b) << std::endl;
-	std::cout << "a <= b\t" << (a <= b) << std::endl;
-	std::cout << "a != b\t" << (a != b) << std::endl;
-	std::cout << "a == b\t" << (a == b) << std::endl;
-	std::cout << "a / b\t" << (a / b) << std::endl;
-	std::cout << "a * b\t" << (a * b) << std::endl;
-	std::cout << "a - b\t" << (a - b) << std::endl;
-	std::cout << "a + b\t" << (a + b) << std::endl;
-	std::cout << "MIN: " << Fixed::min(a, b) << std::endl;
-	std::cout << "MAX: " << Fixed::max(a, b) << std::endl;
-	std::cout << "================================\n";
-}
+	Point a = Point(1,1);
+	Point b = Point(20,20);
+	Point c = Point(3,10);
+	float	x, y;
 
-int main( void ) {
-
-	Fixed a;
-
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	while (1)
 	{
-		Fixed a(-100);
-		Fixed b(5.55f);
-		make_some_tests(a, b);
-	}
-	{
-		Fixed a(10);
-		Fixed b(9.999f);
-		make_some_tests(a, b);
-	}
-	{
-		Fixed a(7);
-		Fixed b(0);
-		make_some_tests(a, b);
+		std::cout << "x, y:  ";
+		std::cin >> x >> y;
+		if (std::cin.eof())
+			break;
+		if (!std::cin.good())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			std::cout << "Wrong input\n";
+			continue;
+		}
+		Point p = Point(x, y);
+		std::cout << "(" << p.getX_Float() << ", " << p.getY_Float()  << ") ";
+		if (bsp(a, b, c, p))
+			std::cout << "is inside.\n";
+		else
+			std::cout << "is not inside.\n";
 	}
 	return 0;
 }

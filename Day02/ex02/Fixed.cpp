@@ -121,29 +121,20 @@ Fixed	operator*(const Fixed &rvalue, const Fixed &lvalue) {
 	int		tmp_value;
 
 	tmp_value = rvalue.getRawBits() * lvalue.getRawBits();
-	ret_val.setRawBits(tmp_value / (1 << ret_val.getFraction())); //////////////////////get fractijn?????????
+	ret_val.setRawBits(tmp_value / (1 << ret_val.getFraction()));
 	return (ret_val);
 }
 
 Fixed	operator/(const Fixed &rvalue, const Fixed &lvalue) {
-	Fixed ret_val;
 
+	Fixed ret_val;
 	float res_tmp;
-	int ret_value = 0;
-	int sign = 0;
 
 	if (lvalue.getRawBits() != 0)	{
 		res_tmp = ((float)rvalue.getRawBits() / lvalue.getRawBits());
 		ret_val = Fixed(res_tmp);
 	} else	{
-		sign = (rvalue.getRawBits() >> 31) ^ (lvalue.getRawBits() >> 31);
-		for (int i = 0; i < 8; i++)	{
-			ret_value |= (1 << (30 - i));
-		}
-		if (sign)
-			ret_val.setRawBits(-ret_value);
-		else
-			ret_val.setRawBits(ret_value);
+		ret_val = Fixed(INT_MAX >> 8);
 	}
 	return (ret_val);
 }

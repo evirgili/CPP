@@ -2,7 +2,9 @@ NAME		= fixed
 #================================= sources =================================#
 
 SRC			=	main.cpp\
-				Fixed.cpp
+				Fixed.cpp\
+				Point.cpp\
+				bsp.cpp
 
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
@@ -10,12 +12,13 @@ OBJ			= $(SRC:.cpp=.o)
 CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98
 #================================= headers =================================#
 INC			=	Fixed.hpp\
+				Point.hpp
 
 %.o:	%.cpp
-	clang++ $(CLANG_FLAGS) -I$(INC) -c $< -o $(<:.cpp=.o)
+	clang++ $(CLANG_FLAGS) -c $< -o $(<:.cpp=.o)
 
 $(NAME):	$(OBJ)	$(INC)
-	clang++ $(CLANG_FLAGS) -I$(INC) $(OBJ) -o $(NAME)
+	clang++ $(CLANG_FLAGS) $(OBJ) -o $(NAME) -I Fixed.hpp -I Point.hpp
 
 all: $(NAME)
 

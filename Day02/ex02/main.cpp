@@ -32,17 +32,17 @@ int main( void ) {
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 	{
-		Fixed a(-100);
+		Fixed a(23);
 		Fixed b(5.55f);
 		make_some_tests(a, b);
 	}
 	{
-		Fixed a(10);
-		Fixed b(9.999f);
+		Fixed a(-10);
+		Fixed b(23.56f);
 		make_some_tests(a, b);
 	}
 	{
-		Fixed a(7);
+		Fixed a(100);
 		Fixed b(0);
 		make_some_tests(a, b);
 	}
