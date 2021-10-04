@@ -1,8 +1,8 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() {
-	std::cout << "FragTr Def constructer called" << std::endl;
-	ClapTrap::SetName("FragTrDefname");
+	std::cout << "Frag Def constructer called" << std::endl;
+	// ClapTrap::SetName("FragDefname ");
 	ClapTrap::SetHP(100);
 	ClapTrap::SetEP(100);
 	ClapTrap::SetAD(30);
@@ -35,11 +35,11 @@ FragTrap::~FragTrap() {
 }
 
 void	FragTrap::highFivesGuys() {
-	std::cout << "First guy" << std::endl;
-	std::cout << "Second guy" << std::endl;
-	std::cout << "Third guy" << std::endl;
-	std::cout << "Fourth guy" << std::endl;
-	std::cout << "Fifth guy" << std::endl;
+	std::cout << this->GetName() << " gives high five to First guy" << std::endl;
+	std::cout << this->GetName() << " gives high five to Second guy" << std::endl;
+	std::cout << this->GetName() << " gives high five to Third guy" << std::endl;
+	std::cout << this->GetName() << " gives high five to Fourth guy" << std::endl;
+	std::cout << this->GetName() << " gives high five to Fifth guy" << std::endl;
 }
 
 void	FragTrap::attack(std::string const &target) {

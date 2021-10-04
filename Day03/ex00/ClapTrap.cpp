@@ -39,7 +39,7 @@ void	ClapTrap::attack(std::string const &target) {
 }
 
 void	ClapTrap::takeDamage(uint32_t amount) {
-	std::cout << "ClapTrap " << this->_name << " take damage " << amount << "points" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " take damage " << amount << " points" << std::endl;
 }
 
 void	ClapTrap::beRepaired(uint32_t amount) {
@@ -62,7 +62,7 @@ void	ClapTrap::SetAD(uint32_t ad) {
 	this->_attackDamage = ad;
 }
 
-std::string	&ClapTrap::GetName() const {
+std::string	ClapTrap::GetName() const {
 	return (this->_name);
 }
 

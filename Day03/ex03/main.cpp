@@ -3,14 +3,14 @@
 
 int main(void)	{
 
-	DiamondTrap	d_trap("Diamond-Shaped Dragon Clapper");
+	DiamondTrap	d_trap("Diamond maker");
 
 
 	std::cout << "\n\n========================================================\n\n";
-	d_trap.attack("Keeper of the Dungeon");
-	d_trap.ClapTrap::attack("stone");
-	d_trap.FragTrap::attack("stick");
-	d_trap.ScavTrap::attack("Lady Bug");
+	d_trap.attack("diamond blaster");
+	d_trap.ClapTrap::attack("clap blaster");
+	d_trap.FragTrap::attack("frag blaster");
+	d_trap.ScavTrap::attack("scav blaster");
 	std::cout << "\n\n========================================================\n\n";
 	d_trap.whoAmI();
 	d_trap.guardGate();

@@ -3,7 +3,8 @@
 ScavTrap::ScavTrap() {
 	std::cout << "Scav Def constructer called" << std::endl;
 	ClapTrap::SetName("ScavDefname");
-	ClapTrap::SetHP(100);
+	_hitPoints = 100;
+	// ClapTrap::SetHP(100);
 	ClapTrap::SetEP(50);
 	ClapTrap::SetAD(20);
 }

@@ -2,7 +2,7 @@
 
 ScavTrap::ScavTrap() {
 	std::cout << "Scav Def constructer called" << std::endl;
-	ClapTrap::SetName("ScavDefname");
+	// ClapTrap::SetName("ScavDefname");
 	ClapTrap::SetHP(100);
 	ClapTrap::SetEP(50);
 	ClapTrap::SetAD(20);
@@ -35,7 +35,7 @@ ScavTrap::~ScavTrap() {
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
+	std::cout << this->GetName() << " have enterred in Gate keeper mode" << std::endl;
 }
 
 void	ScavTrap::attack(std::string const &target) {
