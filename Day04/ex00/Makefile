@@ -4,7 +4,9 @@ NAME		= Animal
 SRC			=	main.cpp\
 				Animal.cpp\
 					Cat.cpp\
-					Dog.cpp
+					Dog.cpp\
+					WrongAnimal.cpp\
+					WrongCat.cpp
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
 #================================= flags ==================================#

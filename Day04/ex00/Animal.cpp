@@ -19,7 +19,7 @@ const std::string	&Animal::GetType() const {
 }
 
 void	Animal::makeSound() const {
-	std::cout << GREEN << "Def Sound of nature" << RESET << std::endl;
+	// std::cout << GREEN << "Def Sound of nature" << RESET << std::endl;
 }
 
 Animal::~Animal() {
