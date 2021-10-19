@@ -9,7 +9,7 @@ class Ice: public AMateria {
 		Ice();
 		Ice(Ice const &copy);
 		~Ice();
-
+		void		use(ICharacter &target);
 		AMateria*	clone(void) const;
 
 };

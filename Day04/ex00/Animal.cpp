@@ -2,19 +2,19 @@
 
 Animal::Animal() {
 	std::cout << GREEN << "Def animal construtor called" << RESET << std::endl;
-	SetType("Def animal");
+	setType("Def animal");
 }
 
 Animal::Animal(const std::string type) {
 	std::cout << GREEN << "Def type animal construtor called" << RESET << std::endl;
-	SetType(type);
+	setType(type);
 }
 
-void	Animal::SetType(const std::string &type) {
+void	Animal::setType(const std::string &type) {
 	Animal::_type = type;
 }
 
-const std::string	&Animal::GetType() const {
+const std::string	&Animal::getType() const {
 	return (this->_type);
 }
 

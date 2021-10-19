@@ -1,13 +1,13 @@
-#include "AMateria.hpp"
+#include "../includes/AMateria.hpp"
 
 AMateria::AMateria() {
 	std::cout << "Def AMateria constructor called" << std::endl;
-	SetType("Nature");
+	setType("Nature");
 }
 
-AMateria::AMateria(std::string &type) {
+AMateria::AMateria(const std::string &type) {
 	std::cout << "Type AMateria constructor called" << std::endl;
-	SetType(type);
+	setType(type);
 }
 
 AMateria::AMateria(const AMateria &copy) {
@@ -15,11 +15,11 @@ AMateria::AMateria(const AMateria &copy) {
 	*this = copy;
 }
 
-void	AMateria::SetType(const std::string &type) {
+void	AMateria::setType(const std::string &type) {
 	this->_type = type;
 }
 
-std::string const	&AMateria::GetType() const {
+std::string const	&AMateria::getType() const {
 	return (this->_type);
 }
 
@@ -29,6 +29,6 @@ AMateria::~AMateria() {
 
 AMateria	&AMateria::operator=(AMateria const &assign) {
 	if (this != &assign)
-		this->SetType(assign.GetType());
+		this->setType(assign.getType());
 	return *this;
 }

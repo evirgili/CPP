@@ -2,19 +2,19 @@
 
 WrongAnimal::WrongAnimal() {
 	std::cout << BLUE << "Def WrongAnimal construtor called" << RESET << std::endl;
-	SetType("Def animal");
+	setType("Def animal");
 }
 
 WrongAnimal::WrongAnimal(const std::string type) {
 	std::cout << BLUE << "Def type WrongAnimal construtor called" << RESET << std::endl;
-	SetType(type);
+	setType(type);
 }
 
-void	WrongAnimal::SetType(const std::string &type) {
+void	WrongAnimal::setType(const std::string &type) {
 	WrongAnimal::_type = type;
 }
 
-const std::string	&WrongAnimal::GetType() const {
+const std::string	&WrongAnimal::getType() const {
 	return (this->_type);
 }
 

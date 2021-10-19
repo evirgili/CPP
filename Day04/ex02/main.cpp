@@ -5,29 +5,12 @@
 
 int main(void)  {
 
-	//{
-	//	std::cout << "\n";
-	//	const Animal* meta = new Animal();
-	//	meta->makeSound();
-	//	delete meta;
-	//	std::cout << "\n";
 
-	//	const Animal* i = new Cat();
-	//	std::cout << i->getType() << " " << std::endl;
-	//	i->makeSound(); //will output the cat sound!
-	//	delete i;
-	//	std::cout << "\n";
 
-	//	const Animal* j = new Dog();
-	//	std::cout << j->getType() << " " << std::endl;
-	//	j->makeSound();
-	//	delete j;
-	//	std::cout << "\n";
-	//}
-
+		// const Animal* meta = new Animal();
 	{
 		Brain	*_brain = new Brain();
-		//Animal	*_meta= new Animal();
+		// Animal	*_meta= new Animal();
 		Brain	*copied_brain = new Brain(*_brain);
 		delete _brain;
 		delete copied_brain;
@@ -56,8 +39,6 @@ int main(void)  {
 		}
 		for (int i = 0; i < 10; ++i)
 			delete pride[i];
-		//for(;;)	{
-		//}
 	}
 	return 0;
 }

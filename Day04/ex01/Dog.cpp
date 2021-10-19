@@ -2,7 +2,7 @@
 
 Dog::Dog() {
 	std::cout << YELLOW << "Dog construtor called" << RESET << std::endl;
-	SetType("Dog");
+	setType("Dog");
 	_brain = new Brain;
 }
 

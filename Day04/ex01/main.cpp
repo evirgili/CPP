@@ -16,7 +16,7 @@ int main(void)  {
 		std::cout << "\n===========CAT=================\n";
 		std::cout << "\n";
 		const Animal* i = new Cat();
-		i->GetType();
+		i->getType();
 		i->makeSound();
 		delete i;
 		std::cout << "\n";
@@ -24,7 +24,7 @@ int main(void)  {
 		std::cout << "\n==========DOG==================\n";
 		std::cout << "\n";
 		const Animal* j = new Dog();
-		j->GetType();
+		j->getType();
 		j->makeSound();
 		delete j;
 		std::cout << "\n";

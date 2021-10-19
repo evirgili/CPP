@@ -2,7 +2,7 @@
 
 Cat::Cat() {
 	std::cout << MAGENTA << "Cat construtor called" << RESET << std::endl;
-	SetType("Cat");
+	setType("Cat");
 	_brain = new Brain;
 }
 

@@ -2,7 +2,7 @@
 
 WrongCat::WrongCat() {
 	std::cout << CYAN << "WrongCat construtor called" << RESET << std::endl;
-	SetType("Cat");
+	setType("Cat");
 }
 
 WrongCat::WrongCat(const std::string &type): WrongAnimal(type) {

@@ -1,8 +1,8 @@
 #ifndef MATERIALSOURCE_HPP
 # define MATERIALSOURCE_HPP
 
-#include "IMaterialSource.hpp"
-#include "AMateria.hpp"
+
+#include	"IMaterialSource.hpp"
 
 class AMateria;
 
@@ -16,7 +16,7 @@ class MateriaSource: public IMateriaSource {
 		MateriaSource(const MateriaSource &copy);
 		~MateriaSource();
 
-		void	learnMaterial(AMateria* m);
+		void		learnMateria(AMateria* m);
 		AMateria*	createMateria(std::string const &type);
 
 		MateriaSource&	operator=(MateriaSource const &assign);

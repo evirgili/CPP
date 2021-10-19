@@ -23,8 +23,8 @@ class Animal
 		Animal(const std::string type);
 		virtual ~Animal();
 
-		void	SetType(const std::string &type);
-		const std::string &GetType() const;
+		void	setType(const std::string &type);
+		const std::string &getType() const;
 		virtual void makeSound() const;
 };
 
