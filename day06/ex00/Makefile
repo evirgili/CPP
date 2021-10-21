@@ -1,15 +1,15 @@
-NAME		= Data
+NAME		= convert
 #================================= sources =================================#
 
 SRC			=	main.cpp\
-				Data.cpp
+				Converter.cpp
 
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
 #================================= flags ==================================#
 CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98
 #================================= headers =================================#
-INC			=	Data.hpp
+INC			=	Converter.cpp
 
 %.o:	%.cpp
 	clang++ $(CLANG_FLAGS) -I$(INC) -c $< -o $(<:.cpp=.o)
