@@ -1,5 +1,4 @@
-
-
+#include "Awesome.hpp"
 #include "whatever.hpp"
 
 
@@ -53,7 +52,7 @@ int	main(void)	{
 		std::cout << "=======================	NULL STUFF	=====================================\n\n";
 		std::string	*c_str = NULL;
 		std::cout << "a_str = " << a_str << ", c_str = " << c_str << std::endl;
-		::swap(a_str, c_str); ////////////не рабоатает (c=  null)
+		::swap(a_str, c_str); ////////////не рабоатает (c =  null)
 		std::cout << "--- swap ---\n";
 		std::cout << "a_str = " << a_str << ", c_str = " << c_str << std::endl;
 		std::cout << "min_ptr( a_str, c_str ) = " << (::min(a_str, c_str)) << std::endl;
@@ -78,6 +77,19 @@ int	main(void)	{
 		std::cout << "max( a_str, b_str ) = " << *(::max(a_a, b_b))  << "\n" << std::endl;
 		delete a_a;
 		delete b_b;
+	}
+	{
+		std::cout << "=======================	AWESOME		=====================================\n\n";
+		Awesome	aw1(100);
+		Awesome	aw2(99);
+		std::cout << "aw1 = " << aw1 << ", b = " << aw2 << std::endl;
+		std::cout << "min( aw1, aw2 ) = " << ::min(aw2, aw1) << std::endl;
+		std::cout << "max( aw1, aw2 ) = " << ::max(aw2, aw1) << "\n" << std::endl;
+		::swap(aw1, aw2);
+		std::cout << "a = " << aw1 << ", b = " << aw2 << std::endl;
+		std::cout << "min( aw1, aw2 ) = " << ::min(aw2,aw1) << std::endl;
+		std::cout << "max( aw1, aw2 ) = " << ::max(aw2,aw1)  << "\n" << std::endl;
+
 	}
 
 	return 0;

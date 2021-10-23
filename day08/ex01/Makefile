@@ -1,7 +1,8 @@
-NAME		= whatever
+NAME		= span
 #================================= sources =================================#
 
-SRC			=	main.cpp
+SRC			=	main.cpp\
+				span.cpp
 
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
@@ -9,13 +10,13 @@ DEPS		= $(SRC:.cpp=.d)
 #================================= flags ==================================#
 CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98 -MMD
 #================================= headers =================================#
-INC			=	whatever.hpp
+INC			=	span.hpp
 
 %.o:	%.cpp
 	clang++ $(CLANG_FLAGS) -I$(INC) -c $< -o $(<:.cpp=.o)
 
 $(NAME):	$(OBJ)	$(INC)
-	clang++ $(CLANG_FLAGS) -I$(INC) -I Awesome.hpp $(OBJ) -o $(NAME)
+	clang++ $(CLANG_FLAGS) -I$(INC) $(OBJ) -o $(NAME)
 
 all: $(NAME)
 

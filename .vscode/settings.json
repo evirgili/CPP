@@ -64,6 +64,11 @@
 		"deque": "cpp",
 		"fstream": "cpp",
 		"stack": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"__tree": "cpp",
+		"list": "cpp",
+		"set": "cpp",
+		"unordered_set": "cpp",
+		"*.ipp": "cpp"
 	}
 }

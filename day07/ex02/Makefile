@@ -5,8 +5,9 @@ SRC			=	main.cpp
 
 #================================= objects =================================#
 OBJ			= $(SRC:.cpp=.o)
+DEPS		= $(SRC:.cpp=.d)
 #================================= flags ==================================#
-CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98
+CLANG_FLAGS	=	-Wall -Wextra -Werror -std=c++98 -MMD
 #================================= headers =================================#
 INC			=	Array.hpp
 
@@ -19,7 +20,7 @@ $(NAME):	$(OBJ)	$(INC)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(DEPS)
 
 fclean: clean
 	rm -rf $(NAME)
@@ -27,3 +28,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+-include $(DEPS)

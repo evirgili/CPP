@@ -70,20 +70,20 @@ t	*min(t *a, t *b) {
 	return (*a < *b ? a : b);
 }
 
-// template <typename t>
-// t const	*max(const t *a, const t *b) {
-// 	if (!a && !b)
-// 		return NULL;
-// 	else if (!a || !b)
-// 		return a ? a : b;
-// 	return (*a > *b ? a : b);
-// }
+template <typename t>
+t const	*max(const t *a, const t *b) {
+	if (!a && !b)
+		return NULL;
+	else if (!a || !b)
+		return a ? a : b;
+	return (*a > *b ? a : b);
+}
 
-// template <typename t>
-// t const	*min(const t *a, const t *b) {
-// 	if (!a && !b)
-// 		return NULL;
-// 	else if (!a || !b)
-// 		return a ? a : b;
-// 	return (*a < *b ? a : b);
-// }
+template <typename t>
+t const	*min(const t *a, const t *b) {
+	if (!a && !b)
+		return NULL;
+	else if (!a || !b)
+		return a ? a : b;
+	return (*a < *b ? a : b);
+}
